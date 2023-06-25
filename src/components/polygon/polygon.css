@@ -1,0 +1,10 @@
+.polygon {
+	border: 1px solid #fff;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: translateZ(0px) rotateX(-45deg) rotateY(-15deg);
+}
+
+.face {
+	position: absolute;
+}
