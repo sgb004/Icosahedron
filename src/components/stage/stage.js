@@ -1,9 +1,9 @@
-import Meteorite from '../meteorite/meteorite';
+import House from '../house/house';
 
 const Stage = () => {
 	return (
 		<div className="stage">
-			<Meteorite />
+			<House />
 		</div>
 	);
 };
