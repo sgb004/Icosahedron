@@ -1,10 +1,21 @@
 .polygon {
-	border: 1px solid #fff;
+	/* border: 1px solid #fff; */
 	position: relative;
 	transform-style: preserve-3d;
-	transform: translateZ(0px) rotateX(-30deg) rotateY(0deg) rotateZ(0);
+	transform: translateZ(0px) rotateX(-30deg) rotateY(-30deg) rotateZ(0);
+	transform: translateZ(0px) rotateX(-0) rotateY(0) rotateZ(0);
+	animation: rotate 20s linear infinite;
 }
 
 .face {
 	position: absolute;
+}
+
+@keyframes rotate {
+	0% {
+		transform: translateZ(0px) rotateX(-30deg) rotateY(360deg) rotateZ(0);
+	}
+	100% {
+		transform: translateZ(0px) rotateX(-30deg) rotateY(0deg) rotateZ(0);
+	}
 }

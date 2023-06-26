@@ -23,7 +23,9 @@ const Polygon = ({ faces }) => {
 						width={face.width}
 						height={face.height}
 						color={face.color}
+						texture={face.texture}
 						transform={`translate3d(${x}px, ${y}px, ${z}px) ${rotationX} ${rotationY} ${rotationZ}`}
+						transformOrigin={face.origin}
 					/>
 				);
 			})}

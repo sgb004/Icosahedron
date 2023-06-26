@@ -1,4 +1,4 @@
-const Face = ({ width, height, color = '#f0f', transform, transformOrigin }) => {
+const Face = ({ width, height, color = '#f0f', texture = '', transform, transformOrigin }) => {
 	return (
 		<div
 			className="face"
@@ -6,6 +6,7 @@ const Face = ({ width, height, color = '#f0f', transform, transformOrigin }) => 
 				width: `${width}px`,
 				height: `${height}px`,
 				backgroundColor: color,
+				backgroundImage: texture ? `url(${texture})` : '',
 				transform,
 				transformOrigin,
 			}}
