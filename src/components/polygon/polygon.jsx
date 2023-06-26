@@ -10,16 +10,20 @@ const Polygon = ({ faces }) => {
 	return (
 		<div className="polygon" style={{ width: size.width, height: size.height }}>
 			{faces.map((face, index) => {
-				//console.log(size.width - face.width / 2, size.height - face.height);
+				const x = (size.width - face.width) / 2 + (face.position?.x || 0);
+				const y = (size.height - face.height) / 2 + (face.position?.y || 0);
+				const z = face.position?.z || 0;
+				const rotationX = face.rotation?.x ? `rotateX(${face.rotation?.x})` : '';
+				const rotationY = face.rotation?.y ? `rotateY(${face.rotation?.y})` : '';
+				const rotationZ = face.rotation?.z ? `rotateZ(${face.rotation?.z})` : '';
+
 				return (
 					<Face
 						key={index}
 						width={face.width}
 						height={face.height}
 						color={face.color}
-						transform={`translate(${(size.width - face.width) / 2}px, ${
-							(size.height - face.height) / 2
-						}px)`}
+						transform={`translate3d(${x}px, ${y}px, ${z}px) ${rotationX} ${rotationY} ${rotationZ}`}
 					/>
 				);
 			})}
