@@ -1,0 +1,30 @@
+.icosahedron {
+	padding: 100px;
+	height: 75vh;
+	width: 75vw;
+	/* perspective: 600px; */
+}
+
+.pentagon-container {
+	border-radius: 100%;
+}
+
+.pentagon {
+	clip-path: polygon(
+		50% 0%,
+		97.552825815% 34.54915028%,
+		79.389262615% 90.450849718%,
+		20.610737385% 90.450849718%,
+		2.447174185% 34.54915028%
+	);
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0.5;
+}
+
+/* 
+lado72 = 29.389262615
+lado = 58.77852523
+apótema = 40.450849718
+*/

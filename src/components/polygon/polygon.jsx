@@ -1,3 +1,5 @@
+'use client';
+
 import Face from '../face/face';
 import maxSize from './max-size';
 import './polygon.css';
@@ -17,8 +19,11 @@ const Polygon = ({ faces }) => {
 				const rotationY = face.rotation?.y ? `rotateY(${face.rotation?.y})` : '';
 				const rotationZ = face.rotation?.z ? `rotateZ(${face.rotation?.z})` : '';
 
+				console.log(face.content);
+
 				return (
 					<Face
+						className={face.class}
 						key={index}
 						width={face.width}
 						height={face.height}
@@ -26,7 +31,9 @@ const Polygon = ({ faces }) => {
 						texture={face.texture}
 						transform={`translate3d(${x}px, ${y}px, ${z}px) ${rotationX} ${rotationY} ${rotationZ}`}
 						transformOrigin={face.origin}
-					/>
+					>
+						{face.content}
+					</Face>
 				);
 			})}
 		</div>

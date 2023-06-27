@@ -1,7 +1,18 @@
-const Face = ({ width, height, color = '#f0f', texture = '', transform, transformOrigin }) => {
+'use client';
+
+const Face = ({
+	className,
+	width,
+	height,
+	color = '#f0f',
+	texture = '',
+	transform,
+	transformOrigin,
+	children,
+}) => {
 	return (
 		<div
-			className="face"
+			className={`face ${className || ''}`}
 			style={{
 				width: `${width}px`,
 				height: `${height}px`,
@@ -10,7 +21,12 @@ const Face = ({ width, height, color = '#f0f', texture = '', transform, transfor
 				transform,
 				transformOrigin,
 			}}
-		></div>
+			onClick={() => {
+				console.log('CLICK EN FACE');
+			}}
+		>
+			{children}
+		</div>
 	);
 };
 
