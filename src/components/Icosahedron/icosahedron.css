@@ -5,8 +5,16 @@
 	/* perspective: 600px; */
 }
 
-.pentagon-container {
-	border-radius: 100%;
+.pentagon-container,
+.hexagon-container {
+	/* border-radius: 100%; */
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.pentagon,
+.hexagon {
+	width: 100%;
+	height: 100%;
 }
 
 .pentagon {
@@ -17,14 +25,61 @@
 		20.610737385% 90.450849718%,
 		2.447174185% 34.54915028%
 	);
-	width: 100%;
-	height: 100%;
-	background: #fff;
-	opacity: 0.5;
+	background: #ebbd25 !important;
 }
 
+.hexagon {
+	/*
+	clip-path: polygon(
+		50% 0%,
+		93.301270189% 25%,
+		93.301270189% 75%,
+		50% 100%,
+		6.698729811% 75%,
+		6.698729811% 25%
+	);
+	*/
+	clip-path: polygon(
+		0% 50%,
+		25% 93.301270189%,
+		75% 93.301270189%,
+		100% 50%,
+		75% 6.698729811%,
+		25% 6.698729811%
+	);
+	background: #25a2eb;
+	opacity: 0.5;
+	position: relative;
+}
+
+.hexagon-container::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px solid #f00;
+	bottom: 0;
+}
+
+.icosahedron .polygon div:nth-child(1n + 1) > div {
+	background: #46eb25;
+}
+
+.icosahedron .polygon div:nth-child(2n + 1) > div {
+	background: #25a2eb;
+}
+
+.icosahedron .polygon div:nth-child(3n + 1) > div {
+	background: #ebe825;
+}
+/*
+.hexagon-12 {
+	transform-origin: center bottom;
+	transform: rotate(-12deg);
+}
+*/
 /* 
-lado72 = 29.389262615
+lado/2 = 29.389262615
 lado = 58.77852523
 apótema = 40.450849718
 */
