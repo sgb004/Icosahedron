@@ -1,13 +1,12 @@
 .polygon {
-	/* border: 1px solid #fff; */
+	--rotationAxisX: 0;
+	--rotationAxisY: 0;
+	--rotationAxisZ: 0;
+
 	position: relative;
 	transform-style: preserve-3d;
-	transform: translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-	transform: translateZ(0px) rotateX(60deg) rotateY(0deg) rotateZ(213deg);
-
-	/* transform: translateZ(0px) rotateX(0) rotateY(0) rotateZ(72deg); */
-	/* transform: translateZ(0px) rotateX(-0) rotateY(0) rotateZ(0); */
-	/* animation: rotate 20s linear infinite; */
+	transform: translateZ(0px) rotateX(var(--rotationAxisX)) rotateY(var(--rotationAxisY))
+		rotateZ(var(--rotationAxisZ));
 }
 
 .face {
