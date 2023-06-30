@@ -4,6 +4,9 @@ import Polygon from '../polygon/polygon';
 import './icosahedron.css';
 
 const Icosahedron = () => {
+	const elevationAngle = 36;
+	const elevationAngleNeg = elevationAngle * -1;
+
 	return (
 		<div className="icosahedron">
 			<Polygon
@@ -20,7 +23,7 @@ const Icosahedron = () => {
 						height: 117.55705046,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { x: 0, y: 0, z: '180deg' },
+						rotation: { x: elevationAngle, y: 0, z: '180deg' },
 						position: { x: 0, y: -10.452846352 },
 					},
 					{
@@ -29,7 +32,7 @@ const Icosahedron = () => {
 						height: 117.55705046,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { x: 0, y: 0, z: '108deg' },
+						rotation: { z: 108, x: elevationAngleNeg },
 						position: { x: 38.471044215, y: -38.403696071 },
 					},
 					{
@@ -38,7 +41,7 @@ const Icosahedron = () => {
 						height: 117.55705046,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { x: 0, y: 0, z: '252deg' },
+						rotation: { z: 252, x: elevationAngleNeg },
 						position: { x: -38.471044215, y: -38.403696071 },
 					},
 					{
@@ -47,7 +50,7 @@ const Icosahedron = () => {
 						height: 117.55705046,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { x: 0, y: 0, z: '324deg' },
+						rotation: { z: '324deg', x: elevationAngleNeg },
 						position: { x: -23.776412907, y: -83.62912093 },
 					},
 					{
@@ -56,7 +59,7 @@ const Icosahedron = () => {
 						height: 117.55705046,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { x: 0, y: 0, z: '36deg' },
+						rotation: { z: '36deg', x: elevationAngleNeg },
 						position: { x: 23.776412907, y: -83.62912093 },
 					},
 				]}

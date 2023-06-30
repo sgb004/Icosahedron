@@ -2,7 +2,10 @@
 	padding: 100px;
 	height: 75vh;
 	width: 75vw;
-	/* perspective: 600px; */
+	perspective: 10000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pentagon-container,
