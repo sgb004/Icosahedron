@@ -4,7 +4,7 @@ import Polygon from '../polygon/polygon';
 import './icosahedron.css';
 
 const Icosahedron = () => {
-	const elevationAngle = 36;
+	const elevationAngle = 37.377368143;
 	const elevationAngleNeg = elevationAngle * -1;
 
 	return (
