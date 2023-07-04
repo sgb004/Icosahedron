@@ -4,8 +4,23 @@ import Polygon from '../polygon/polygon';
 import './icosahedron.css';
 
 const Icosahedron = () => {
+	const pentagonSide = 100;
+	const hexagonSide = pentagonSide * 1.175570505;
+	const hexPoints = {
+		p1: 8.891722196,
+		p2: 32.725424848,
+		p3: 32.668135095,
+		p4: 20.225424852,
+		p5: 71.139179296,
+	};
+
 	const elevationAngle = 37.377368143;
+	//const elevationAngle = 0;
 	const elevationAngleNeg = elevationAngle * -1;
+
+	for (let key in hexPoints) {
+		hexPoints[key] = (hexPoints[key] * hexagonSide) / 100;
+	}
 
 	return (
 		<div className="icosahedron">
@@ -13,54 +28,54 @@ const Icosahedron = () => {
 				faces={[
 					{
 						class: 'pentagon-container',
-						width: 100,
-						height: 100,
+						width: pentagonSide,
+						height: pentagonSide,
 						content: <div className="pentagon" />,
 					},
 					{
 						class: 'hexagon-container',
-						width: 117.55705046,
-						height: 117.55705046,
+						width: hexagonSide,
+						height: hexagonSide,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { x: elevationAngle, y: 0, z: '180deg' },
-						position: { x: 0, y: -10.452846352 },
+						rotation: { x: elevationAngle, y: 0, z: 180 },
+						position: { x: 0, y: -hexPoints.p1 },
 					},
 					{
 						class: 'hexagon-container',
-						width: 117.55705046,
-						height: 117.55705046,
+						width: hexagonSide,
+						height: hexagonSide,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
 						rotation: { z: 108, x: elevationAngleNeg },
-						position: { x: 38.471044215, y: -38.403696071 },
+						position: { x: hexPoints.p2, y: -hexPoints.p3 },
 					},
 					{
 						class: 'hexagon-container',
-						width: 117.55705046,
-						height: 117.55705046,
+						width: hexagonSide,
+						height: hexagonSide,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
 						rotation: { z: 252, x: elevationAngleNeg },
-						position: { x: -38.471044215, y: -38.403696071 },
+						position: { x: -hexPoints.p2, y: -hexPoints.p3 },
 					},
 					{
 						class: 'hexagon-container',
-						width: 117.55705046,
-						height: 117.55705046,
+						width: hexagonSide,
+						height: hexagonSide,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { z: '324deg', x: elevationAngleNeg },
-						position: { x: -23.776412907, y: -83.62912093 },
+						rotation: { z: 324, x: elevationAngleNeg },
+						position: { x: -hexPoints.p4, y: -hexPoints.p5 },
 					},
 					{
 						class: 'hexagon-container',
-						width: 117.55705046,
-						height: 117.55705046,
+						width: hexagonSide,
+						height: hexagonSide,
 						content: <div className="hexagon" />,
 						origin: '50% 93.30127019%',
-						rotation: { z: '36deg', x: elevationAngleNeg },
-						position: { x: 23.776412907, y: -83.62912093 },
+						rotation: { z: 36, x: elevationAngleNeg },
+						position: { x: hexPoints.p4, y: -hexPoints.p5 },
 					},
 				]}
 			/>
