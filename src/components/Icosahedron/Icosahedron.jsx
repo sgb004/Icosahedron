@@ -77,6 +77,15 @@ const Icosahedron = () => {
 						rotation: { z: 36, x: elevationAngleNeg },
 						position: { x: hexPoints.p4, y: -hexPoints.p5 },
 					},
+					{
+						class: 'pentagon-container',
+						width: pentagonSide,
+						height: pentagonSide,
+						content: <div className="pentagon" />,
+						origin: '50% 0%',
+						rotation: { z: 180 },
+						position: {y: -50.9036960461, z: -35.68220897968}
+					},
 				]}
 			/>
 		</div>
