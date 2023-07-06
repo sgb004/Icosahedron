@@ -5,14 +5,14 @@ import Face from '../face/face';
 import maxSize from './max-size';
 import './polygon.css';
 
-const Polygon = ({ faces, size }) => {
-	console.log(faces);
+const Polygon = ({ faces, size, className = '' }) => {
+	console.log({ className });
 
 	const sizePolygon = size || maxSize(faces);
 
 	return (
 		<div
-			className="polygon"
+			className={`polygon ${className}`}
 			style={{ width: sizePolygon.width, height: sizePolygon.height }}
 		>
 			{faces.map((face, index) => {

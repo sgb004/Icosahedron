@@ -20,6 +20,9 @@
 .hexagon {
 	width: 100%;
 	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pentagon {
@@ -67,21 +70,26 @@
 	bottom: 0;
 }
 
-.icosahedron div div:nth-child(1n + 1) div {
+.icosahedron > .polygon > .face {
+	transform-style: preserve-3d;
+}
+
+.icosahedron .base div:nth-child(1n + 1) div {
 	background: #eb7e25;
 }
 
-.icosahedron div div:nth-child(2n + 1) div {
+.icosahedron .base div:nth-child(2n + 1) div {
 	background: #25a2eb;
 }
 
-.icosahedron div div:nth-child(3n + 1) div {
+.icosahedron .base div:nth-child(3n + 1) div {
 	background: #ebe825;
 }
 
-.icosahedron div div:nth-child(4n + 1) div {
+.icosahedron .base div:nth-child(4n + 1) div {
 	background: #eb2525;
 }
+
 /*
 .icosahedron div div:nth-child(5n + 1) div {
 	background: #25ebeb;

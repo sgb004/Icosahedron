@@ -1,6 +1,7 @@
 'use client';
 
 import Polygon from '../polygon/polygon';
+import Base from './base';
 import './icosahedron.css';
 
 const Icosahedron = () => {
@@ -41,61 +42,22 @@ const Icosahedron = () => {
 				size={{ width: 100, height: 100 }}
 				faces={[
 					{
-						class: 'pentagon-container',
+						class: 'base-container',
 						width: penContainerSide,
 						height: penContainerSide,
-						content: <div className="pentagon" />,
-					},
-					{
-						class: 'hexagon-container',
-						width: hexContainerSide,
-						height: hexContainerSide,
-						content: <div className="hexagon" />,
-						origin: '50% 93.30127019%',
-						rotation: { x: elevationAngle1, y: 0, z: 180 },
-						position: { x: 0, y: -hexPoints.p1 },
-					},
-					{
-						class: 'hexagon-container',
-						width: hexContainerSide,
-						height: hexContainerSide,
-						content: <div className="hexagon" />,
-						origin: '50% 93.30127019%',
-						rotation: { z: 108, x: -elevationAngle1 },
-						position: { x: hexPoints.p2, y: -hexPoints.p3 },
-					},
-					{
-						class: 'hexagon-container',
-						width: hexContainerSide,
-						height: hexContainerSide,
-						content: <div className="hexagon" />,
-						origin: '50% 93.30127019%',
-						rotation: { z: 252, x: -elevationAngle1 },
-						position: { x: -hexPoints.p2, y: -hexPoints.p3 },
-					},
-					{
-						class: 'hexagon-container',
-						width: hexContainerSide,
-						height: hexContainerSide,
-						content: <div className="hexagon" />,
-						origin: '50% 93.30127019%',
-						rotation: { z: 324, x: -elevationAngle1 },
-						position: { x: -hexPoints.p4, y: -hexPoints.p5 },
-					},
-					{
-						class: 'hexagon-container',
-						width: hexContainerSide,
-						height: hexContainerSide,
-						content: <div className="hexagon" />,
-						origin: '50% 93.30127019%',
-						rotation: { z: 36, x: -elevationAngle1 },
-						position: { x: hexPoints.p4, y: -hexPoints.p5 },
+						content: (
+							<Base
+								penContainerSide={penContainerSide}
+								id="0"
+								faces={[1, 2, 3, 4, 5]}
+							/>
+						),
 					},
 					{
 						class: 'pentagon-container',
 						width: penContainerSide,
 						height: penContainerSide,
-						content: <div className="pentagon" />,
+						content: <Base penContainerSide={penContainerSide} id="1" faces={[]} />,
 						origin: '50% 0%',
 						rotation: { z: 180, x: elevationAngle2 },
 						position: { y: -penPoints.p1, z: penPoints.p2 },
@@ -104,7 +66,7 @@ const Icosahedron = () => {
 						class: 'pentagon-container',
 						width: penContainerSide,
 						height: penContainerSide,
-						content: <div className="pentagon" />,
+						content: <Base penContainerSide={penContainerSide} id="2" faces={[]} />,
 						origin: '50% 0%',
 						rotation: { z: 252, x: elevationAngle2 },
 						position: {
@@ -117,7 +79,7 @@ const Icosahedron = () => {
 						class: 'pentagon-container',
 						width: penContainerSide,
 						height: penContainerSide,
-						content: <div className="pentagon" />,
+						content: <Base penContainerSide={penContainerSide} id="3" faces={[]} />,
 						origin: '50% 0%',
 						rotation: { z: 108, x: elevationAngle2 },
 						position: {
