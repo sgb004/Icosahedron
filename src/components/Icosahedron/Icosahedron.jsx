@@ -38,6 +38,7 @@ const Icosahedron = () => {
 	return (
 		<div className="icosahedron">
 			<Polygon
+				size={{ width: 100, height: 100 }}
 				faces={[
 					{
 						class: 'pentagon-container',
@@ -98,6 +99,32 @@ const Icosahedron = () => {
 						origin: '50% 0%',
 						rotation: { z: 180, x: elevationAngle2 },
 						position: { y: -penPoints.p1, z: penPoints.p2 },
+					},
+					{
+						class: 'pentagon-container',
+						width: penContainerSide,
+						height: penContainerSide,
+						content: <div className="pentagon" />,
+						origin: '50% 0%',
+						rotation: { z: 252, x: elevationAngle2 },
+						position: {
+							x: 47.552825815 + 47.552825795,
+							y: 34.54915028 - 15.450849712,
+							z: penPoints.p2,
+						},
+					},
+					{
+						class: 'pentagon-container',
+						width: penContainerSide,
+						height: penContainerSide,
+						content: <div className="pentagon" />,
+						origin: '50% 0%',
+						rotation: { z: 108, x: elevationAngle2 },
+						position: {
+							x: -47.552825815 - 47.552825795,
+							y: 34.54915028 - 15.450849712,
+							z: penPoints.p2,
+						},
 					},
 				]}
 			/>

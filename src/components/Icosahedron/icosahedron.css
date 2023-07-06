@@ -11,7 +11,9 @@
 .pentagon-container,
 .hexagon-container {
 	border-radius: 100%;
-	/* background-color: rgba(255, 255, 255, 0.5); */
+	/*
+	background-color: rgba(255, 255, 255, 0.25);
+	*/
 }
 
 .pentagon,
@@ -29,6 +31,7 @@
 		2.447174185% 34.54915028%
 	);
 	/* background: #ebbd25 !important; */
+	opacity: 0.5;
 }
 
 .hexagon {
@@ -65,7 +68,7 @@
 }
 
 .icosahedron div div:nth-child(1n + 1) div {
-	background: #46eb25;
+	background: #eb7e25;
 }
 
 .icosahedron div div:nth-child(2n + 1) div {
@@ -77,8 +80,21 @@
 }
 
 .icosahedron div div:nth-child(4n + 1) div {
-	background: #ebbd25;
+	background: #eb2525;
 }
+/*
+.icosahedron div div:nth-child(5n + 1) div {
+	background: #25ebeb;
+}
+
+.icosahedron div div:nth-child(6n + 1) div {
+	background: #eb7e25;
+}
+
+.icosahedron div div:nth-child(7n + 1) div {
+	background: #4deb25;
+}
+*/
 
 /*
 .hexagon-12 {
