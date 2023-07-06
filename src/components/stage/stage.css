@@ -4,6 +4,7 @@
 	--rotationAxisZ: 0;
 
 	position: relative;
+	perspective: 10000px;
 	transform-style: preserve-3d;
 	transform: rotateX(var(--rotationAxisX)) rotateY(var(--rotationAxisY))
 		rotateZ(var(--rotationAxisZ));
