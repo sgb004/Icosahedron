@@ -12,8 +12,6 @@ const stageUseEffect = (stage) => {
 
 		event.preventDefault();
 
-		console.log(event.key);
-
 		switch (event.key) {
 			case 'ArrowUp':
 				rotation.X++;
@@ -43,8 +41,6 @@ const stageUseEffect = (stage) => {
 			default:
 				break;
 		}
-
-		console.log(stage);
 
 		for (const axis in rotation) {
 			stage.style.setProperty(`--rotationAxis${axis}`, `${rotation[axis]}deg`);
