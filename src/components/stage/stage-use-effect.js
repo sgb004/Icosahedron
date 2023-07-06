@@ -1,10 +1,10 @@
-const polygonUseEffect = (polygon) => {
+const stageUseEffect = (stage) => {
 	const rotation = { X: 0, Y: 0, Z: 0 };
 
 	for (const axis in rotation) {
 		rotation[axis] = parseInt(localStorage.getItem(`rotation${axis}`));
 		isNaN(rotation[axis]) && (rotation[axis] = 0);
-		polygon.style.setProperty(`--rotationAxis${axis}`, `${rotation[axis]}deg`);
+		stage.style.setProperty(`--rotationAxis${axis}`, `${rotation[axis]}deg`);
 	}
 
 	const rotationKeyDown = (event) => {
@@ -43,7 +43,7 @@ const polygonUseEffect = (polygon) => {
 		}
 
 		for (const axis in rotation) {
-			polygon.style.setProperty(`--rotationAxis${axis}`, `${rotation[axis]}deg`);
+			stage.style.setProperty(`--rotationAxis${axis}`, `${rotation[axis]}deg`);
 			localStorage.setItem(`rotation${axis}`, rotation[axis]);
 		}
 	};
@@ -55,4 +55,4 @@ const polygonUseEffect = (polygon) => {
 	};
 };
 
-export default polygonUseEffect;
+export default stageUseEffect;

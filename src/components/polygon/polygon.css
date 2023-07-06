@@ -1,12 +1,6 @@
 .polygon {
-	--rotationAxisX: 0;
-	--rotationAxisY: 0;
-	--rotationAxisZ: 0;
-
 	position: relative;
 	transform-style: preserve-3d;
-	transform: translateZ(0px) rotateX(var(--rotationAxisX)) rotateY(var(--rotationAxisY))
-		rotateZ(var(--rotationAxisZ));
 }
 
 .face {

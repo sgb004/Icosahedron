@@ -3,20 +3,15 @@
 import { useEffect, useRef } from 'react';
 import Face from '../face/face';
 import maxSize from './max-size';
-import polygonUseEffect from './polygon-use-effect';
 import './polygon.css';
 
 const Polygon = ({ faces, size }) => {
 	console.log(faces);
 
 	const sizePolygon = size || maxSize(faces);
-	const polygonRef = useRef();
-
-	useEffect(() => polygonUseEffect(polygonRef.current), []);
 
 	return (
 		<div
-			ref={polygonRef}
 			className="polygon"
 			style={{ width: sizePolygon.width, height: sizePolygon.height }}
 		>
