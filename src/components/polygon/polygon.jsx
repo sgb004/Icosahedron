@@ -6,10 +6,10 @@ import maxSize from './max-size';
 import polygonUseEffect from './polygon-use-effect';
 import './polygon.css';
 
-const Polygon = ({ faces }) => {
+const Polygon = ({ faces, size }) => {
 	console.log(faces);
 
-	const size = maxSize(faces);
+	const sizePolygon = size || maxSize(faces);
 	const polygonRef = useRef();
 
 	useEffect(() => polygonUseEffect(polygonRef.current), []);
@@ -18,11 +18,11 @@ const Polygon = ({ faces }) => {
 		<div
 			ref={polygonRef}
 			className="polygon"
-			style={{ width: size.width, height: size.height }}
+			style={{ width: sizePolygon.width, height: sizePolygon.height }}
 		>
 			{faces.map((face, index) => {
-				const x = (size.width - face.width) / 2 + (face.position?.x || 0);
-				const y = (size.height - face.height) / 2 + (face.position?.y || 0);
+				const x = (sizePolygon.width - face.width) / 2 + (face.position?.x || 0);
+				const y = (sizePolygon.height - face.height) / 2 + (face.position?.y || 0);
 				const z = face.position?.z || 0;
 
 				let rotation = '';
