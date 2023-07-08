@@ -1,9 +1,10 @@
 'use client';
 
 import Polygon from '../polygon/polygon';
+import Points from './points';
 
 const Base = ({ penContainerSide, faces, id }) => {
-	console.log({ faces });
+  console.log(Points.penContainerSide);
 
 	const MathSin = (angle) => Math.sin((angle * Math.PI) / 180);
 

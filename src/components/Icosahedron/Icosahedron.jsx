@@ -1,10 +1,14 @@
 'use client';
 
 import Polygon from '../polygon/polygon';
+import Points from './points';
 import Base from './base';
 import './icosahedron.css';
 
 const Icosahedron = () => {
+  Points.init();
+  console.log(Points.penContainerSide);
+  
 	const MathSin = (angle) => Math.sin((angle * Math.PI) / 180);
 
 	const penContainerSide = 100;
