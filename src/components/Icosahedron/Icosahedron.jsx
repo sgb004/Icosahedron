@@ -3,7 +3,7 @@
 import Polygon from '../polygon/polygon';
 import Measures from './Measures';
 import Base from './base';
-import './icosahedron.css';
+import './icosahedron.scss';
 
 const Icosahedron = () => {
 	const size = 100;

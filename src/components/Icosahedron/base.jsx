@@ -10,7 +10,7 @@ const Base = ({ faces, id }) => {
 			width: Measures.penContainerSide,
 			height: Measures.penContainerSide,
 			content: (
-				<div className={`pentagon ${id}-0`}>
+				<div className={`pentagon pen-${id}-0`}>
 					<span>{id} - 0</span>
 				</div>
 			),
@@ -20,7 +20,7 @@ const Base = ({ faces, id }) => {
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
 			content: (
-				<div className={`hexagon ${id}-1`}>
+				<div className={`hexagon hex-${id}-1`}>
 					<span>{id} - 1</span>
 				</div>
 			),
@@ -33,7 +33,7 @@ const Base = ({ faces, id }) => {
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
 			content: (
-				<div className={`hexagon ${id}-2`}>
+				<div className={`hexagon hex-${id}-2`}>
 					<span>{id} - 2</span>
 				</div>
 			),
@@ -46,7 +46,7 @@ const Base = ({ faces, id }) => {
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
 			content: (
-				<div className={`hexagon ${id}-3`}>
+				<div className={`hexagon hex-${id}-3`}>
 					<span>{id} - 3</span>
 				</div>
 			),
@@ -59,7 +59,7 @@ const Base = ({ faces, id }) => {
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
 			content: (
-				<div className={`hexagon ${id}-4`}>
+				<div className={`hexagon hex-${id}-4`}>
 					<span>{id} - 4</span>
 				</div>
 			),
@@ -72,7 +72,7 @@ const Base = ({ faces, id }) => {
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
 			content: (
-				<div className={`hexagon ${id}-5`}>
+				<div className={`hexagon hex-${id}-5`}>
 					<span>{id} - 5</span>
 				</div>
 			),

@@ -23,6 +23,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	opacity: 0.5;
 }
 
 .pentagon {
@@ -33,8 +34,6 @@
 		20.610737385% 90.450849718%,
 		2.447174185% 34.54915028%
 	);
-	/* background: #ebbd25 !important; */
-	opacity: 0.5;
 }
 
 .hexagon {
@@ -56,8 +55,6 @@
 		75% 6.698729811%,
 		25% 6.698729811%
 	);
-	background: #25a2eb;
-	opacity: 0.5;
 	position: relative;
 }
 
@@ -74,42 +71,35 @@
 	transform-style: preserve-3d;
 }
 
-.icosahedron .base div:nth-child(1n + 1) div {
-	background: #eb7e25;
+@for $i from 0 through 5 {
+	$red: 240 - ($i * 10);
+	$green: 255 - ($i * 10);
+
+	.pentagon.pen-#{$i}-0 {
+		background: rgb($red, 242, 235);
+	}
+
+	.hexagon.hex-#{$i}-1 {
+		background: rgb($green, 189, 135);
+	}
+
+	.hexagon.hex-#{$i}-2 {
+		background: rgb($green, 215, 145);
+	}
+
+	.hexagon.hex-#{$i}-3 {
+		background: rgb($red - 7, 232, 166);
+	}
+
+	.hexagon.hex-#{$i}-4 {
+		background: rgb($red - 23, 232, 174);
+	}
+
+	.hexagon.hex-#{$i}-5 {
+		background: rgb($red - 49, 227, 192);
+	}
 }
 
-.icosahedron .base div:nth-child(2n + 1) div {
-	background: #25a2eb;
-}
-
-.icosahedron .base div:nth-child(3n + 1) div {
-	background: #ebe825;
-}
-
-.icosahedron .base div:nth-child(4n + 1) div {
-	background: #eb2525;
-}
-
-/*
-.icosahedron div div:nth-child(5n + 1) div {
-	background: #25ebeb;
-}
-
-.icosahedron div div:nth-child(6n + 1) div {
-	background: #eb7e25;
-}
-
-.icosahedron div div:nth-child(7n + 1) div {
-	background: #4deb25;
-}
-*/
-
-/*
-.hexagon-12 {
-	transform-origin: center bottom;
-	transform: rotate(-12deg);
-}
-*/
 /* 
 lado/2 = 29.389262615
 lado = 58.77852523
