@@ -38,8 +38,8 @@ const Icosahedron = () => {
 						origin: '50% 0%',
 						rotation: { z: 252, x: Measures.elevationAngle2 },
 						position: {
-							x: 47.552825815 + 47.552825795,
-							y: 34.54915028 - 15.450849712,
+							x: Measures.penPoints.p3,
+							y: Measures.penPoints.p4,
 							z: Measures.penPoints.p2,
 						},
 					},
@@ -51,8 +51,8 @@ const Icosahedron = () => {
 						origin: '50% 0%',
 						rotation: { z: 108, x: Measures.elevationAngle2 },
 						position: {
-							x: -47.552825815 - 47.552825795,
-							y: 34.54915028 - 15.450849712,
+							x: -Measures.penPoints.p3,
+							y: Measures.penPoints.p4,
 							z: Measures.penPoints.p2,
 						},
 					},
@@ -64,8 +64,8 @@ const Icosahedron = () => {
 						origin: '50% 0%',
 						rotation: { z: 324, x: Measures.elevationAngle2 },
 						position: {
-							x: 47.552825815 - 18.1635632 + 29.389262615,
-							y: 34.54915028 + 55.901699438 + 40.450849718,
+							x: Measures.penPoints.p5,
+							y: Measures.penPoints.p6,
 							z: Measures.penPoints.p2,
 						},
 					},
@@ -77,8 +77,8 @@ const Icosahedron = () => {
 						origin: '50% 0%',
 						rotation: { z: 36, x: Measures.elevationAngle2 },
 						position: {
-							x: -47.552825815 + 18.1635632 - 29.389262615,
-							y: 34.54915028 + 55.901699438 + 40.450849718,
+							x: -Measures.penPoints.p5,
+							y: Measures.penPoints.p6,
 							z: Measures.penPoints.p2,
 						},
 					},

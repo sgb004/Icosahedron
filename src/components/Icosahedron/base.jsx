@@ -88,7 +88,13 @@ const Base = ({ faces, id }) => {
 
 	for (let i = 0; i < faces.length; i++) facesSelected.push(listFaces[faces[i]]);
 
-	return <Polygon className="base" size={{ width: 100, height: 100 }} faces={facesSelected} />;
+	return (
+		<Polygon
+			className="base"
+			size={{ width: Measures.penContainerSide, height: Measures.penContainerSide }}
+			faces={facesSelected}
+		/>
+	);
 };
 
 export default Base;
