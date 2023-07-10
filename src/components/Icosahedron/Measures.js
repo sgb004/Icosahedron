@@ -13,6 +13,7 @@ class Measures {
 		this.hexContainerSide = penContainerSide * 1.175570505;
 
 		console.log(this.hexContainerSide);
+		console.log(this.penContainerSide);
 
 		const MathSin = (angle) => Math.sin((angle * Math.PI) / 180);
 		const MathCos = (angle) => Math.cos((angle * Math.PI) / 180);
@@ -46,12 +47,11 @@ class Measures {
 			p6: p4 + this.hexContainerSide * MathCos(18),
 		};
 
-		console.log(this.hexContainerSide);
-		console.log(this.penPoints);
-
 		for (let key in this.hexPoints) {
 			this.hexPoints[key] = (this.hexPoints[key] * this.hexContainerSide) / 100;
 		}
+
+		console.log('RADIO DEL ICOSAHEDRO', (hexApothem * 2 + 40.450849718 * 2 + penSide) / 2);
 	}
 }
 
