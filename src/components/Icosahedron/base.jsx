@@ -84,8 +84,6 @@ const Base = ({ faces, id }) => {
 
 	const facesSelected = [listFaces[0]];
 
-	console.log({ listFaces });
-
 	for (let i = 0; i < faces.length; i++) facesSelected.push(listFaces[faces[i]]);
 
 	return (

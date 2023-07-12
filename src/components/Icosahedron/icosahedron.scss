@@ -73,14 +73,6 @@
 	transform-style: preserve-3d;
 }
 
-.half-container {
-	transform: translate3d(0px, 0px, calc(var(--halfContainerPositionZ) * -1)) !important;
-}
-
-.half-container + .half-container {
-	transform: translate3d(0px, 0px, var(--halfContainerPositionZ)) rotateX(180deg) !important;
-}
-
 @for $i from 0 through 5 {
 	$red: 240 - ($i * 10);
 	$green: 255 - ($i * 10);

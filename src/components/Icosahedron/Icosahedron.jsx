@@ -10,13 +10,8 @@ const Icosahedron = () => {
 
 	Measures.init(size);
 
-	//const positionZ = Measures.penContainerSide + Measures.hexContainerSide;
-	const positionZ = 136.60254037844388;
-
-	console.log(positionZ);
-
 	return (
-		<div className="icosahedron" style={{ '--halfContainerPositionZ': `${positionZ}px` }}>
+		<div className="icosahedron">
 			<Polygon
 				size={{ width: size, height: size }}
 				faces={[
@@ -35,7 +30,7 @@ const Icosahedron = () => {
 								}}
 							/>
 						),
-						position: { z: -positionZ },
+						position: { z: -Measures.icosahedronHalfHeight },
 					},
 					{
 						class: 'half-container',
@@ -53,7 +48,7 @@ const Icosahedron = () => {
 							/>
 						),
 						rotation: { x: 180 },
-						position: { z: positionZ },
+						position: { z: Measures.icosahedronHalfHeight },
 					},
 				]}
 			/>

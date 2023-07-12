@@ -6,8 +6,6 @@ import maxSize from './max-size';
 import './polygon.css';
 
 const Polygon = ({ faces, size, className = '' }) => {
-	console.log({ className });
-
 	const sizePolygon = size || maxSize(faces);
 
 	return (
