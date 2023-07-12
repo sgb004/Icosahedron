@@ -1,11 +1,17 @@
 .icosahedron {
-	padding: 100px;
-	height: 75vh;
-	width: 75vw;
+	padding: 0;
+	height: 100px;
+	width: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .pentagon-container,
@@ -58,6 +64,8 @@
 	position: relative;
 }
 
+/*
+TO DEBUG
 .hexagon-container::after {
 	content: '';
 	display: block;
@@ -66,6 +74,7 @@
 	border-bottom: 1px solid #f00;
 	bottom: 0;
 }
+*/
 
 .icosahedron > .polygon > .face,
 .icosahedron > .half-container > .face,

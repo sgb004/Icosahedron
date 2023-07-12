@@ -9,21 +9,13 @@ const Base = ({ faces, id }) => {
 			class: 'pentagon-container',
 			width: Measures.penContainerSide,
 			height: Measures.penContainerSide,
-			content: (
-				<div className={`pentagon pen-${id}-0`}>
-					<span>{id} - 0</span>
-				</div>
-			),
+			content: <div className={`pentagon pen-${id}-0`}>{/* <span>{id} - 0</span> */}</div>,
 		},
 		{
 			class: 'hexagon-container',
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
-			content: (
-				<div className={`hexagon hex-${id}-1`}>
-					<span>{id} - 1</span>
-				</div>
-			),
+			content: <div className={`hexagon hex-${id}-1`}>{/* <span>{id} - 1</span> */}</div>,
 			origin: '50% 93.30127019%',
 			rotation: { z: 36, x: -Measures.elevationAngle1 },
 			position: { x: Measures.hexPoints.p4, y: -Measures.hexPoints.p5 },
@@ -32,11 +24,7 @@ const Base = ({ faces, id }) => {
 			class: 'hexagon-container',
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
-			content: (
-				<div className={`hexagon hex-${id}-2`}>
-					<span>{id} - 2</span>
-				</div>
-			),
+			content: <div className={`hexagon hex-${id}-2`}>{/* <span>{id} - 2</span> */}</div>,
 			origin: '50% 93.30127019%',
 			rotation: { z: 108, x: -Measures.elevationAngle1 },
 			position: { x: Measures.hexPoints.p2, y: -Measures.hexPoints.p3 },
@@ -45,11 +33,7 @@ const Base = ({ faces, id }) => {
 			class: 'hexagon-container',
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
-			content: (
-				<div className={`hexagon hex-${id}-3`}>
-					<span>{id} - 3</span>
-				</div>
-			),
+			content: <div className={`hexagon hex-${id}-3`}>{/* <span>{id} - 3</span> */}</div>,
 			origin: '50% 93.30127019%',
 			rotation: { x: Measures.elevationAngle1, y: 0, z: 180 },
 			position: { x: 0, y: -Measures.hexPoints.p1 },
@@ -58,11 +42,7 @@ const Base = ({ faces, id }) => {
 			class: 'hexagon-container',
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
-			content: (
-				<div className={`hexagon hex-${id}-4`}>
-					<span>{id} - 4</span>
-				</div>
-			),
+			content: <div className={`hexagon hex-${id}-4`}>{/* <span>{id} - 4</span> */}</div>,
 			origin: '50% 93.30127019%',
 			rotation: { z: 252, x: -Measures.elevationAngle1 },
 			position: { x: -Measures.hexPoints.p2, y: -Measures.hexPoints.p3 },
@@ -71,11 +51,7 @@ const Base = ({ faces, id }) => {
 			class: 'hexagon-container',
 			width: Measures.hexContainerSide,
 			height: Measures.hexContainerSide,
-			content: (
-				<div className={`hexagon hex-${id}-5`}>
-					<span>{id} - 5</span>
-				</div>
-			),
+			content: <div className={`hexagon hex-${id}-5`}>{/* <span>{id} - 5</span> */}</div>,
 			origin: '50% 93.30127019%',
 			rotation: { z: 324, x: -Measures.elevationAngle1 },
 			position: { x: -Measures.hexPoints.p4, y: -Measures.hexPoints.p5 },
