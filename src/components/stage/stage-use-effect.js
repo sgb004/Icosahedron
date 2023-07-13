@@ -8,7 +8,7 @@ const stageUseEffect = (stage) => {
 	}
 
 	const rotationKeyDown = (event) => {
-		if (event.key === 'F5') return;
+		if (event.key === 'F5' || event.key === 'F11') return;
 
 		event.preventDefault();
 

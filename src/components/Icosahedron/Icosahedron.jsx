@@ -6,7 +6,7 @@ import Half from './half';
 import './icosahedron.scss';
 
 const Icosahedron = () => {
-	const size = 100;
+	const size = 200;
 
 	Measures.init(size);
 
