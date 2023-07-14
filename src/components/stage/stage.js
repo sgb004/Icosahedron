@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import stageUseEffect from './stage-use-effect';
 import Icosahedron from '../Icosahedron/Icosahedron';
-import House from '../house/house';
 
 import './stage.css';
 
